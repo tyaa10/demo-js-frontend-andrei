@@ -1,0 +1,19 @@
+{
+  "name": "demo-js-frontend-andrei",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyaa10/demo-es2021-andrei.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyaa10/demo-es2021-andrei/issues"
+  },
+  "homepage": "https://github.com/tyaa10/demo-es2021-andrei#readme"
+}

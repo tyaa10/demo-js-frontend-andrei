@@ -1,4 +1,4 @@
-const x = 45
+// const x = 44
 
 function doJob(data, path, succsessCallback) {
   new Promise((resolve, reject) => {
@@ -24,7 +24,23 @@ function doJob(data, path, succsessCallback) {
     .catch(error => console.log(error))
 }
 
-console.log('Start The Jobs')
-doJob(x, '/fibWorker.mjs', (result) => console.log(`fib(${x}) = ${result}`))
-doJob(x, '/factWorker.mjs', (result) => console.log(`fact(${x}) = ${result}`))
-console.log('Start The Jobs is Finished')
+// console.log('Start The Jobs')
+// doJob(x, '/fibWorker.mjs', (result) => console.log(`fib(${x}) = ${result}`))
+// doJob(x, '/factWorker.mjs', (result) => console.log(`fact(${x}) = ${result}`))
+// console.log('Start The Jobs is Finished')
+
+const factResultSpan = document.getElementById('factResult')
+const fibResultSpan = document.getElementById('fibResult')
+
+const form = document.getElementsByTagName('form')[0]
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  const input = document.getElementById('x')
+  const x = input.value
+  factResultSpan.innerText = 'Wait For Calculating Result...'
+  fibResultSpan.innerText = 'Wait For Calculating Result...'
+  doJob(x, '/fibWorker.mjs', (result) => fibResultSpan.innerText = result)
+  doJob(x, '/factWorker.mjs', (result) => factResultSpan.innerText = result)
+})
+

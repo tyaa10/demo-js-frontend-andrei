@@ -38,6 +38,13 @@ form.addEventListener('submit', (event) => {
   event.preventDefault()
   const input = document.getElementById('x')
   const x = input.value
+
+ 
+// b = document.createElement("b")
+ // b.innerHTML = x
+ // document.body.insertBefore(b, ")" )
+  document.getElementById("s1").innerHTML = x
+  document.getElementById("s2").innerHTML = x
   factResultSpan.innerText = 'Wait For Calculating Result...'
   fibResultSpan.innerText = 'Wait For Calculating Result...'
   doJob(x, '/fibWorker.mjs', (result) => fibResultSpan.innerText = result)

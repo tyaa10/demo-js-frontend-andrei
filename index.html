@@ -10,14 +10,15 @@
   <form>
     <label for="x">
       x =
-      <input id="x" type="text" placeholder="input value" required>
+      <input id="x" type="number" min="1" max="44" step="1" placeholder="input value" required>
     </label>
     <input type="submit" value="Start Calc!">
   </form>
   <section>
-    <strong>Factorial(44) = </strong><span id="factResult"></span>
+    
+    <strong>Factorial(<b id="s1"></b>) = </strong><span id="factResult"></span>
     &nbsp;&nbsp;&nbsp;
-    <strong>Fibonacci(44) = </strong><span id="fibResult"></span>
+    <strong>Fibonacci(<b id="s2"></b>) = </strong><span id="fibResult"></span>
   </section>
   <script type="module" src="/async.mjs"></script>
 </body>

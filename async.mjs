@@ -1,6 +1,6 @@
 // const x = 44
 
-function doJob(data, path, succsessCallback) {
+function doJob(data, path, succsessCallback, errorCallback) {
   new Promise((resolve, reject) => {
     try {
       // создание фонового потока, выполняющего код из модуля fibWorker,
@@ -21,7 +21,7 @@ function doJob(data, path, succsessCallback) {
       reject(error)
     }
   }).then(succsessCallback) // когда результат готов - выводим в консоль
-    .catch(error => console.log(error))
+    .catch(errorCallback)
 }
 
 // console.log('Start The Jobs')
@@ -37,14 +37,24 @@ const form = document.getElementsByTagName('form')[0]
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   const input = document.getElementById('x')
-  const x = input.value
+  const x = Number(input.value)
 
  
   document.getElementById("s1").innerHTML = x
   document.getElementById("s2").innerHTML = x
   factResultSpan.innerText = 'Wait For Calculating Result...'
   fibResultSpan.innerText = 'Wait For Calculating Result...'
-  doJob(x, '/fibWorker.mjs', (result) => fibResultSpan.innerText = result)
-  doJob(x, '/factWorker.mjs', (result) => factResultSpan.innerText = result)
+  doJob(
+    x,
+    '/fibWorker.mjs',
+    (result) => fibResultSpan.innerText = result,
+    (error) => fibResultSpan.innerText = error
+  )
+  doJob(
+    x,
+    '/factWorker.mjs',
+    (result) => factResultSpan.innerText = result,
+    (error) => factResultSpan.innerText = error
+  )
 })
 

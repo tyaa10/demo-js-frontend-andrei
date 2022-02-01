@@ -1,4 +1,7 @@
 function fact(n) {
+  if (typeof n !== 'number' || n < 1) {
+    postMessage('Error: argument n must be a number from 1 and greather')
+  }
   if (n === 1) {
     return 1
   }

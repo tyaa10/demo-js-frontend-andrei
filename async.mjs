@@ -40,9 +40,6 @@ form.addEventListener('submit', (event) => {
   const x = input.value
 
  
-// b = document.createElement("b")
- // b.innerHTML = x
- // document.body.insertBefore(b, ")" )
   document.getElementById("s1").innerHTML = x
   document.getElementById("s2").innerHTML = x
   factResultSpan.innerText = 'Wait For Calculating Result...'

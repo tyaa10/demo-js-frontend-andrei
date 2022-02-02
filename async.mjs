@@ -35,11 +35,14 @@ const fibResultSpan = document.getElementById('fibResult')
 const form = document.getElementsByTagName('form')[0]
 
 form.addEventListener('submit', (event) => {
+  document.getElementById("s").innerHTML = ''
   event.preventDefault()
   const input = document.getElementById('x')
-  const x = Number(input.value)
+  const x = Number(input.value)   
+var regX = /^([1-9]|[1-3][\d]|4[0-4])$/.test(x)
 
- 
+console.log(regX)
+if (regX) {
   document.getElementById("s1").innerHTML = x
   document.getElementById("s2").innerHTML = x
   factResultSpan.innerText = 'Wait For Calculating Result...'
@@ -56,5 +59,9 @@ form.addEventListener('submit', (event) => {
     (result) => factResultSpan.innerText = result,
     (error) => factResultSpan.innerText = error
   )
+} else {
+  document.getElementById("s").innerHTML = 'You entered the wrong value'
+}
 })
+
 

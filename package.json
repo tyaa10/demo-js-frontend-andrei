@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/tyaa10/demo-es2021-andrei/issues"
   },
-  "homepage": "https://github.com/tyaa10/demo-es2021-andrei#readme"
+  "homepage": "https://github.com/tyaa10/demo-es2021-andrei#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }

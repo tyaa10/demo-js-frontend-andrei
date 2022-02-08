@@ -30,5 +30,5 @@ function showStudents(students) {
   studentsDiv.innerHTML = studentCardsString
 }
 
-const students = getStudents()
+const students = await getStudents()
 showStudents(students)

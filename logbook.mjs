@@ -32,3 +32,6 @@ function showStudents(students) {
 
 const students = await getStudents()
 showStudents(students)
+console.log('test')
+
+// getStudents().then(response => response.json()).then(responseBody => showStudents(responseBody.data))

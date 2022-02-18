@@ -1,5 +1,23 @@
-nav {
+ nav  {
   position: sticky !important;
   top: 0;
   z-index: 999;
+}
+
+#button {
+  position: sticky !important;
+  top: 60px;
+  padding-left: 10px;
+  z-index: 998;
+}
+
+.btn-link {
+  font-size: 1.7rem !important;
+}
+
+button.col-12 {
+  position: sticky !important;
+  top: 60px;
+  padding-left: 300px;
+  z-index: 998;
 }

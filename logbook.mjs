@@ -1,10 +1,20 @@
 import { getStudents } from './studentsRepository.mjs'
 
+const buttonDiv = document.getElementById('button')
+buttonDiv.innerHTML = `<button type="button" class="btn btn-link" id="clickbutton">Add +</button>`
+const clickButton = document.getElementById('clickbutton')
+clickButton.addEventListener('click', onClick)
+function onClick() {
+  console.log("click")
+}
+
+
+
 function showStudents(students) {
   let studentCardsString = ''
   for (let i = 0; i < students.length; i++) {
       // console.log(students[i])
-      const studentCard = `<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3">
+      const studentCard = `<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3"> 
                             <div class="card">
                               <div class="card-body">
                                 <h5 class="card-title">${students[i].name}</h5>

@@ -4,20 +4,31 @@
   z-index: 999;
 }
 
-#button {
-  position: sticky !important;
+#toolbox {
+  position: sticky;
   top: 60px;
+  z-index: 999;
+  text-align: left;
   padding-left: 10px;
-  z-index: 998;
+  padding-right: 0;
 }
 
-.btn-link {
+#openAddFormButton::after {
+  content: 'Add';
+}
+
+@media (max-width: 767px) {
+  #toolbox {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+  #openAddFormButton::after {
+    content: '+';
+  }
+}
+
+#toolbox > * {
   font-size: 1.7rem !important;
-}
-
-button.col-12 {
-  position: sticky !important;
-  top: 60px;
-  padding-left: 300px;
-  z-index: 998;
+  text-decoration: none;
 }

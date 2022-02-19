@@ -1,14 +1,10 @@
 import { getStudents } from './studentsRepository.mjs'
 
-const buttonDiv = document.getElementById('button')
-buttonDiv.innerHTML = `<button type="button" class="btn btn-link" id="clickbutton">Add +</button>`
-const clickButton = document.getElementById('clickbutton')
-clickButton.addEventListener('click', onClick)
+const openAddFormButton = document.getElementById('openAddFormButton')
+openAddFormButton.addEventListener('click', onClick)
 function onClick() {
   console.log("click")
 }
-
-
 
 function showStudents(students) {
   let studentCardsString = ''
@@ -42,6 +38,5 @@ function showStudents(students) {
 
 const students = await getStudents()
 showStudents(students)
-console.log('test')
 
 // getStudents().then(response => response.json()).then(responseBody => showStudents(responseBody.data))

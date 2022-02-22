@@ -19,7 +19,7 @@ function showStudents(students) {
                                     <strong>Age: </strong><span>${students[i].age}</span>
                                   </div>
                                   <div>
-                                    <strong>Score: </strong><span>${students[i].avgscore}</span>
+                                    <strong>Score: </strong><span>${students[i].avgScore}</span>
                                   </div>
                                   <div>
                                     <strong>E-mail: </strong><span>${students[i].email}</span>

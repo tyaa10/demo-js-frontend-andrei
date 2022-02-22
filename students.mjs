@@ -11,5 +11,5 @@ const studentArray = [
   { "name": "ralf", "age": 29, "avgscore": 10.7, "email": "ralf@test.com", "id": 10 },
   { "name": "natali", "age": 24, "avgscore": 10.9, "email": "natali@test.com", "id": 11 },
   { "name": "eva", "age": 22, "avgscore": 10, "email": "eva@test.com", "id": 12 }]
-
+  
 export default studentArray

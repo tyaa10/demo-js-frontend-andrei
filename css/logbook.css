@@ -9,8 +9,7 @@
   top: 60px;
   z-index: 999;
   text-align: left;
-  padding-left: 10px;
-  padding-right: 0;
+  padding-left: 10px
 }
 
 #openAddFormButton::after {
@@ -20,8 +19,7 @@
 @media (max-width: 767px) {
   #toolbox {
     text-align: right;
-    padding-left: 0;
-    padding-right: 10px;
+    padding-right: 10px
   }
   #openAddFormButton::after {
     content: '+';
@@ -31,4 +29,18 @@
 #toolbox > * {
   font-size: 1.7rem !important;
   text-decoration: none;
+}
+
+.custom-collapse {
+  position: fixed !important;
+  top: 60px;
+  z-index: 999;
+  width: 320px;
+  margin: -320px;
+  height: 100vh;
+  /* height: 320px; */
+}
+
+.custom-collapse > .card {
+  height: 100vh;
 }

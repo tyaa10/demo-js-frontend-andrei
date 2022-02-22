@@ -1,10 +1,41 @@
-import { getStudents } from './studentsRepository.mjs'
+import { getStudents, addStudent } from './studentsRepository.mjs'
 
+const addFormSidebar = document.getElementById('addFormSidebar')
 const openAddFormButton = document.getElementById('openAddFormButton')
-openAddFormButton.addEventListener('click', onClick)
-function onClick() {
-  console.log("click")
-}
+const addButton = document.getElementById('addStudentButton')
+
+addFormSidebar.addEventListener('click', e => e.stopPropagation())
+
+openAddFormButton.addEventListener('click', e => {
+  e.stopPropagation()
+  console.log(addFormSidebar.style.margin)
+  if (addFormSidebar.style.margin !== '0px') {
+    addFormSidebar.style.margin = 0
+  } else {
+    addFormSidebar.style.margin = '-320px'
+  }
+})
+
+document.addEventListener('click', e => {
+  if (e.target.id !== 'openAddFormButton') {
+    addFormSidebar.style.margin = '-320px'
+  }
+  // console.log(e.target.id)
+})
+
+addButton.addEventListener('click', async e => {
+  e.preventDefault()
+  const newStudent = {
+    "name": nameInput.value,
+    "age": ageInput.value,
+    "avgScore": 5,
+    "email": "test@test.com"
+  }
+  if(await addStudent(newStudent)) {
+    const students = await getStudents()
+    showStudents(students)
+  }
+})
 
 function showStudents(students) {
   let studentCardsString = ''

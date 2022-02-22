@@ -31,7 +31,24 @@
     </div>
   </nav>
   <div id="toolbox">
-    <button type="button" class="btn btn-link" id="openAddFormButton"></button>
+    <button type="button" class="btn btn-link" id="openAddFormButton" data-bs-target="#addFormSidebar"></button>
+  </div>
+  <div id="addFormSidebar" class="custom-collapse">
+    <div class="card card-body">
+      <form id="addStudentForm">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name: </label>
+          <input type="text" class="form-control" id="nameInput" aria-describedby="nameHelp">
+          <div id="nameHelp" class="form-text">Student's name</div>
+        </div>
+        <div class="mb-3">
+          <label for="ageInput" class="form-label">Age: </label>
+          <input type="text" class="form-control" id="ageInput" aria-describedby="ageHelp">
+          <div id="ageHelp" class="form-text">Student's age</div>
+        </div>
+        <button id="addStudentButton" type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
   </div>
   <div class="container">
     <h2>Logbook</h2>
